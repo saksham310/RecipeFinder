@@ -32,6 +32,13 @@
   padding: 0.8em;
   border-radius: 0.6em;
   font-weight: 600;
+  text-decoration: none;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+.btn:active {
+  background-color: #7df91d;
 }
 .accent {
   color: #8bd452;
