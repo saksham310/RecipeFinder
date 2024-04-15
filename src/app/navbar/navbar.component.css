@@ -3,13 +3,18 @@
   align-items: center;
 }
 .header__nav {
-  width: 90vw;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em;
+  padding: 1em;
+  background-color: #f6f7f8;
 }
 .header__logo-box {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  padding: 15px 0 0 15px;
 }
