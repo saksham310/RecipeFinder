@@ -1,5 +1,6 @@
 .cardDisplay {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  padding: 1.5em;
+  gap: 3em;
+  padding: 3.5em;
 }
