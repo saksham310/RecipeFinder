@@ -54,6 +54,11 @@ getAllRecipe():Foodrecipe[]{
 getIdRecipe(id:number):Foodrecipe|undefined{
   return this.foodRecipe.find((food)=>food.id===id);
 }
+
+deleteRecipe(id:number):void{
+  const recipe=this.foodRecipe.findIndex((food)=>food.id===id);
+  this.foodRecipe.splice(recipe,1);
+}
 saveToLocalStorage(){
   localStorage.setItem(this.key,JSON.stringify(this.foodRecipe));
 }

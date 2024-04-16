@@ -1,5 +1,6 @@
-import {Input, Component } from '@angular/core';
+import {Input, Component,inject } from '@angular/core';
 import { Foodrecipe } from '../foodrecipe';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-card-layout',
@@ -10,4 +11,11 @@ import { Foodrecipe } from '../foodrecipe';
 })
 export class CardLayoutComponent {
 @Input() foodList!:Foodrecipe;
+recipeService:RecipeService=inject(RecipeService);
+
+delete(event:MouseEvent,id:number):void{
+  event.preventDefault();
+  this.recipeService.deleteRecipe(id);
+  this.recipeService.saveToLocalStorage();
+}
 }
