@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component ,inject} from '@angular/core';
 import { Router } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { Foodrecipe } from '../foodrecipe';
 import { CardLayoutComponent } from '../card-layout/card-layout.component';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-home',
@@ -12,15 +13,9 @@ import { CardLayoutComponent } from '../card-layout/card-layout.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  readonly baseUrl='http://127.0.0.1:8000/media/items/default.jpeg';
-  foodRecipe:Foodrecipe={
-    id: 1,
-    description:'A delicious lemon chicken',
-    ingredients:['Lemon','Chicken'],
-    name: 'Lemon Chicken',
-    instructions:'Cook nicely.Cook cool',
-    category:'Meat',
-    photo:`${this.baseUrl}`,
+  foodRecipe:Foodrecipe[]=[];
+  recipeService:RecipeService=inject(RecipeService);
+  constructor(){
+    this.foodRecipe=this.recipeService.getAllRecipe();
   }
-
 }

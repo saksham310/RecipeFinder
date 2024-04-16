@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Input, Component } from '@angular/core';
+import { Foodrecipe } from '../foodrecipe';
 
 @Component({
   selector: 'app-card-layout',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './card-layout.component.css'
 })
 export class CardLayoutComponent {
-
+@Input() foodList!:Foodrecipe;
 }
