@@ -12,7 +12,7 @@ export class RecipeService {
     const data=localStorage.getItem(this.key);
     if(data){
       this.foodRecipe=JSON.parse(data) as Foodrecipe[];
-      console.log("fetched");
+     
     }
     else{
       

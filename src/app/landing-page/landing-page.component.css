@@ -27,8 +27,7 @@
 }
 .btn,
 .btn:active {
-  background-color: #51a41f;
-  background-color: #084c5a;
+  background-color: black;
   color: white;
   display: inline-block;
   padding: 0.8em;
@@ -41,6 +40,5 @@
 }
 
 .accent {
-  color: #51a41f;
-  color: #084c5a;
+  color: #80c2e7;
 }
