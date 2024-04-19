@@ -1,18 +1,53 @@
-.detail__img {
-  width: 100%;
-
-  border: 1px solid black;
-}
-.detail {
-  width: 100vw;
-  border: 1px solid rgb(13, 28, 232);
-  padding: 2em 2em 2em 5em;
-}
 .detail__container {
-  width: 75%;
-  border: 1px solid red;
-  padding: 5em;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 2em;
+  grid-template-columns: 1fr 1fr 1fr;
+  line-height: 2em;
+}
+.box {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1.5em;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+}
+img {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
+.detail__instructions {
+  background-color: #ffffff7d;
+}
+.detail__ingredients {
+  /* ; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+.detail__description,
+.ingredients__list {
+  background-color: #ffffff7d;
+}
+
+.detail__description--content,
+.ingredients__list--content {
+  display: none;
+}
+.detail-page {
+  padding: 2em;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  border-radius: 30px;
+  margin: 1em 8em;
+  background-color: #6db9ff38;
+}
+.active {
+  display: block;
+  flex-grow: 2;
+}
+.detail__description.active .detail__description--content,
+.ingredients__list.active .ingredients__list--content {
+  display: block;
+  flex-grow: 2;
 }

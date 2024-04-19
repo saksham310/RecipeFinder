@@ -1,41 +1,39 @@
 <app-navbar></app-navbar>
-<section class="detail">
+<section class="detail-page">
+    <div class="detail__title">
+        <h1>{{recipe?.name}}</h1>
+    </div>
     <div class="detail__container">
-        <div class="detail__right"><img class="detail__img" src="../../assets/hero1.png" alt="food">
-            <h1 class="detail__title">{{recipe?.name}}</h1>
+        <div class="detail__img ">
+            <img src="../../assets/detail.jpg" alt="">
         </div>
-
-        <div class="detail__foodInfo">
-            <h2 class="detail__title">Instruction</h2>
-            <p>{{recipe?.instructions}}
-            </p>
-            <div class="detail__contents">
-
-                <div class="detail__ingredients">
-                    <p>Ingridents</p>
-                    <div class="detail__ingreditents--content">
-                        <li>recipe</li>
-                        <li>recipe</li>
-                        <li>recipe</li>
-                        <li>recipe</li>
-
-
-
-                    </div>
+        <div class="detail__ingredients ">
+            <div class="ingredients__list box" [ngClass]="{'active':box==='ingredient'}" (click)="toggle('ingredient')">
+                <h2>Ingredients</h2>
+                <div class="ingredients__list--content">
+                    @for(ingredient of recipe?.ingredients;track ingredient){
+                    <li>{{ingredient}}</li>
+                    }
                 </div>
-                <div>
-                    <li>Instructuon</li>
-                    <li>A</li>
-                    <li>A</li>
-                    <li>A</li>
-                    <li>A</li>
+
+            </div>
+            <div class="detail__description box " [ngClass]="{'active':box==='description'}"
+                (click)="toggle('description')">
+                <h2>Description</h2>
+                <div class=" detail__description--content">
+                    <p>{{recipe?.description}}.
+
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="detail__instructions box">
+            <h2>Instruction</h2>
+            <ul>@for(step of getInstruction(recipe?.instructions);track step){
+                <li>{{step}}</li>
+                }
+            </ul>
 
-
-
-
-
+        </div>
     </div>
 </section>
