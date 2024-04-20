@@ -2,6 +2,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 100%;
+  /* color: white; */
   border-radius: 5px;
   border: 1px solid black;
 }
@@ -16,10 +17,25 @@
 
 img {
   border-radius: 5px 5px 0 0;
+  height: 250px;
+  object-fit: cover;
 }
 
 .card__container {
   padding: 2px 16px;
 
-  background-color: #e7f5fe;
+  background-color: #b6d4f6;
+}
+
+#detail {
+  text-decoration: none;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  padding: 5px;
+}
+#detail:hover {
+  background-color: white;
+  color: black;
 }

@@ -1,0 +1,42 @@
+.cardDisplay {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 3em;
+  padding: 3.5em;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100dvh;
+  margin-top: 3em;
+}
+.home__searchBox {
+  margin-top: 2em;
+  width: 20em;
+}
+.home__searchArea {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.home__main {
+  margin: 2em;
+  display: grid;
+  grid-template-columns: 4fr;
+}
+.home__crud {
+  display: flex;
+  gap: 3em;
+}
+@media screen and (max-width: 768px) {
+  .cardDisplay {
+    grid-template-columns: 1fr;
+  }
+}

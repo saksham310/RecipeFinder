@@ -1,6 +1,7 @@
 .header {
   display: flex;
   align-items: center;
+  height: 4em;
 }
 .header__nav {
   width: 100vw;
@@ -8,13 +9,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  background-color: #f6f7f8;
 }
 .header__logo-box {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-h3 {
-  padding: 15px 0 0 15px;
+h1 {
+  padding: 0 0 0 40px;
 }

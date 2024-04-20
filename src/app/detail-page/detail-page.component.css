@@ -20,7 +20,6 @@ img {
   background-color: #ffffff7d;
 }
 .detail__ingredients {
-  /* ; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -34,6 +33,7 @@ img {
 .detail__description--content,
 .ingredients__list--content {
   display: none;
+  transition: height 0.3 ease;
 }
 .detail-page {
   padding: 2em;
@@ -45,9 +45,21 @@ img {
 .active {
   display: block;
   flex-grow: 2;
+  height: auto;
 }
 .detail__description.active .detail__description--content,
 .ingredients__list.active .ingredients__list--content {
   display: block;
   flex-grow: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .detail__container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 425px) {
+  .detail-page {
+    margin: 2em;
+  }
 }

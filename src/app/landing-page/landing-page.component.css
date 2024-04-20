@@ -1,15 +1,19 @@
 .hero {
-  height: 100vh;
+  height: 75vh;
   /* overflow: hidden; */
   display: flex;
   justify-content: center;
   align-items: stretch;
 }
 .hero__container {
+  height: 60%;
+  background-color: #69a6ed7d;
+  border-radius: 20px;
+  margin: 3em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* gap: 3em; */
-  padding: 6.2em;
+  padding: 5.2em;
+  align-items: center;
 }
 .hero__title--primary {
   font-size: 2.6em;
@@ -40,5 +44,14 @@
 }
 
 .accent {
-  color: #80c2e7;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 430px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+  }
+  img {
+    display: none;
+  }
 }
