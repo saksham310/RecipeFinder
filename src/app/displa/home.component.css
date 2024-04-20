@@ -35,7 +35,7 @@
   display: flex;
   gap: 3em;
 }
-.sort button {
+.home__crud button {
   padding: 0.75rem 2rem;
   display: flex;
   border: none;
@@ -56,6 +56,29 @@ input[type="text"] {
 input[type="text"]:focus {
   outline: none;
   border-color: #999;
+}
+.sort label {
+  margin-right: 5px;
+}
+.centered-message {
+  display: flex;
+  position: absolute;
+  left: 35%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-message h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.centered-message p {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

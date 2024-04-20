@@ -13,7 +13,7 @@
                 </path>
             </svg>
         </div>
-        <div class="sort">
+        <div class="home__crud">
             <button [routerLink]="['/create']">Add New Recipe <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="24" height="24" viewBox="0,0,256,256" style="fill:#000000;">
                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -30,13 +30,26 @@
     </div>
     <div class="home__main">
 
-        <div class="home__crud">
-            <span>Sort By</span>
+        <div class="sort">
+            <label for="order">Sort By:</label>
+            <select id="order" (change)="sortRecipe($event)">
+                <option value="desc">Descending</option>
+                <option value="asc">Ascending</option>
 
+            </select>
         </div>
+
+
+
         <div class="cardDisplay">
             @for(foodLists of filteredFoodRecipe;track foodLists.id){
-            <app-card-layout [foodList]="foodLists"></app-card-layout>}
+            <app-card-layout [foodList]="foodLists"></app-card-layout>}@empty{
+            <div class="centered-message">
+                <h2>Oops! No Recipe found.</h2>
+                <p>Create a new one or find other recipes.</p>
+            </div>
+
+            }
         </div>
     </div>
 </div>

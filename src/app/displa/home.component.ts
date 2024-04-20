@@ -33,4 +33,13 @@ export class HomeComponent {
     this.view=!this.view
 return this.view
   }
+  sortRecipe(event:any){
+    const sortOrder=event.target.value;
+    if(sortOrder==="asc"){
+      this.filteredFoodRecipe.sort((a,b)=>(a.name>b.name)?1:-1);
+    }else{
+      this.filteredFoodRecipe.sort((a,b)=>(a.name<b.name)?1:-1);
+    }
+
+  }
 }
