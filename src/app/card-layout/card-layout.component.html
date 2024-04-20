@@ -1,11 +1,11 @@
 <div class="card">
-    <img src="{{foodList.photo}}" alt="Avatar" style="width:100%">
+    <img src="../../assets/card.jpeg" alt="Avatar" style="width:100%">
     <div class="card__container">
         <div class="card__cta--top cta">
             <h4><b>{{foodList.name}}</b></h4>
             <!-- <p>Edit</p> -->
-            <a><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
-                    style="fill:#000000;">
+            <a [routerLink]="['/update',foodList.id]"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30"
+                    height="30" viewBox="0,0,256,256" style="fill:#000000;">
                     <g fill="#94a0a8" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                         stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                         font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -17,6 +17,9 @@
                         </g>
                     </g>
                 </svg></a>
+        </div>
+        <div class="category">
+            Category:{{foodList.category}}
         </div>
         <div class="card__cta--bottom cta">
             <h5><a id="detail" [routerLink]="['/detail',foodList.id]">View More</a></h5>

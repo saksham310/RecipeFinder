@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   height: 100dvh;
-  margin-top: 3em;
+  margin-top: 5em;
 }
 .home__searchBox {
   margin-top: 2em;
@@ -35,6 +35,29 @@
   display: flex;
   gap: 3em;
 }
+.sort button {
+  padding: 0.75rem 2rem;
+  display: flex;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+input[type="text"] {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #999;
+}
+
 @media screen and (max-width: 768px) {
   .cardDisplay {
     grid-template-columns: 1fr;

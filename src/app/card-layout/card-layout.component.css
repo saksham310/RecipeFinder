@@ -39,3 +39,12 @@ img {
   background-color: white;
   color: black;
 }
+.category {
+  display: inline-block;
+  padding: 5px 3px;
+  background-color: #b6d4f6;
+  border-radius: 5px;
+  color: #333; /* Text color */
+  font-size: 14px;
+  font-weight: bold;
+}

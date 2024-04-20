@@ -11,7 +11,7 @@
             <div class="ingredients__list box" [ngClass]="{'active':box==='ingredient'}" (click)="toggle('ingredient')">
                 <h2>Ingredients</h2>
                 <div class="ingredients__list--content">
-                    @for(ingredient of recipe?.ingredients;track ingredient){
+                    @for(ingredient of getIngredients(recipe?.ingredients);track ingredient){
                     <li>{{ingredient}}</li>
                     }
                 </div>

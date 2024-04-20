@@ -29,6 +29,10 @@ return instructions?.split(".");
 
 
 }
+getIngredients(ingredient:string|undefined){
+  ingredient = ingredient?.trim().replace(/\.$/, "");
+  return ingredient?.split(",");
+}
 toggle(text:string){
   this.box=text;
 }

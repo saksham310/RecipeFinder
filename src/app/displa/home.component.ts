@@ -1,5 +1,5 @@
 import { Component ,inject} from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { Foodrecipe } from '../foodrecipe';
 import { CardLayoutComponent } from '../card-layout/card-layout.component';
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent,CardLayoutComponent,CommonModule],
+  imports: [NavbarComponent,CardLayoutComponent,CommonModule,RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
