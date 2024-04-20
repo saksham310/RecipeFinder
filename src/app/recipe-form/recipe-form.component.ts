@@ -19,8 +19,8 @@ recipe=new FormGroup({
   id:new FormControl(),
   name:new FormControl(''),
   description:new FormControl(''),
-  ingredient:new FormControl(''),
-  instruction:new FormControl(''),
+  ingredients:new FormControl(''),
+  instructions:new FormControl(''),
   category:new FormControl('')
 })
 
@@ -34,9 +34,9 @@ constructor(private route:ActivatedRoute){
       id: food.id,
     name: food.name, 
     description: food.description,
-    ingredient: food.ingredients,
+    ingredients: food.ingredients,
     category:food.category,
-    instruction:food.instructions
+    instructions:food.instructions
 });
     console.log(this.recipe);
 
@@ -47,8 +47,19 @@ constructor(private route:ActivatedRoute){
 }
 onSubmit(){
  if(this.isNew){
-  this.recipeService.addRecipe(this.recipe.value as Foodrecipe)
-  this.recipe.reset;
+  const newId=parseInt(this.recipe.get('id')?.value);
+  console.log(typeof(newId));
+  
+  const food = {
+    id: newId,
+    name: this.recipe.get('name')?.value,  // Access other form control values
+    description: this.recipe.get('description')?.value,
+    ingredients: this.recipe.get('ingredients')?.value,
+    instructions: this.recipe.get('instructions')?.value,
+    category: this.recipe.get('category')?.value,
+  };
+console.log(typeof(food.id));
+  this.recipeService.addRecipe(food as Foodrecipe);
   window.alert("Recipe Successfull Added");
  }
  else{
