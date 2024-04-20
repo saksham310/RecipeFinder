@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class RecipeFormComponent {
   id:number;
   isNew:boolean=true;
+  button:string="Add";
 recipe=new FormGroup({
   id:new FormControl(),
   name:new FormControl(''),
@@ -29,6 +30,7 @@ constructor(private route:ActivatedRoute){
   this.id=Number(this.route.snapshot.params['id']);
   if(this.id){
    this.isNew=false;
+   this.button="Update";
    const food=this.recipeService.getIdRecipe(this.id) as Foodrecipe;
     this.recipe.setValue({
       id: food.id,
@@ -46,7 +48,7 @@ constructor(private route:ActivatedRoute){
   }
 }
 onSubmit(){
- if(this.isNew){
+ 
   const newId=parseInt(this.recipe.get('id')?.value);
   console.log(typeof(newId));
   
@@ -59,11 +61,13 @@ onSubmit(){
     category: this.recipe.get('category')?.value,
   };
 console.log(typeof(food.id));
+if(this.isNew){
   this.recipeService.addRecipe(food as Foodrecipe);
   window.alert("Recipe Successfull Added");
  }
  else{
-  this.recipeService.updateRecipe(this.id,this.recipe.value as Foodrecipe)
+  this.recipeService.updateRecipe(this.id,food as Foodrecipe)
+  window.alert("Recipe Successfull Updated");
  }
 }
 }
