@@ -18,5 +18,6 @@ delete(event:MouseEvent,id:number):void{
   event.preventDefault();
   this.recipeService.deleteRecipe(id);
   this.recipeService.saveToLocalStorage();
+  window.alert("Recipe Succesfully deleted");
 }
 }
