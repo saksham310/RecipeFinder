@@ -48,3 +48,8 @@ img {
   font-size: 14px;
   font-weight: bold;
 }
+@media screen and (max-width: 430px) {
+  .cardDisplay {
+    padding: 0;
+  }
+}

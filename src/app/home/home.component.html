@@ -1,9 +1,10 @@
 <!-- <app-navbar></app-navbar> -->
 <div class="home" id='home'>
+    <!-- <div class="title">
+        <h2>Recipe </h2>
+    </div> -->
     <div class="search">
-        <div class="a">
-            <h2>Recipe </h2>
-        </div>
+
         <div class="home__searchArea">
             <input #search type="text" name="" class="home__searchBox" (keyup)="filter(search.value)"
                 placeholder="Search for the recipes">
@@ -27,9 +28,6 @@
                 </svg></button>
 
         </div>
-    </div>
-    <div class="home__main">
-
         <div class="sort">
             <label for="order">Sort By:</label>
             <select id="order" (change)="sortRecipe($event)">
@@ -38,6 +36,11 @@
 
             </select>
         </div>
+
+    </div>
+
+    <div class="home__main">
+
 
 
 

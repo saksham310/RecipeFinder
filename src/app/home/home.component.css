@@ -85,4 +85,21 @@ input[type="text"]:focus {
   .cardDisplay {
     grid-template-columns: 1fr;
   }
+  .search {
+    flex-wrap: wrap;
+  }
+  .home__crud button {
+    margin-top: 31px;
+  }
+  .sort {
+    margin-top: 2em;
+  }
+}
+@media screen and (max-width: 430px) {
+  .search {
+    display: block;
+  }
+  .cardDisplay {
+    padding: 0;
+  }
 }
