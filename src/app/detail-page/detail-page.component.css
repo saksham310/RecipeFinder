@@ -57,9 +57,11 @@ img {
   .detail__container {
     grid-template-columns: 1fr;
   }
-}
-@media screen and (max-width: 425px) {
+  img {
+    width: 85vw;
+    height: 500px;
+  }
   .detail-page {
-    margin: 2em;
+    margin: 0;
   }
 }
