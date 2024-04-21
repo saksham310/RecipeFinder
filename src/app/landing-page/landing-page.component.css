@@ -47,19 +47,20 @@
   color: #ffffff;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 600px) {
   .hero__container {
     grid-template-columns: 1fr;
     position: absolute;
-    left: 9%;
-    width: 50%;
+    /* left: 9%; */
+    width: 76%;
     margin: 0;
+    padding: 1.5em;
   }
   img {
     display: none;
   }
 }
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
   .hero__container {
     left: 4%;
     width: 44%;
@@ -68,5 +69,4 @@
 @media screen and (max-width: 320px) {
   .hero__container {
     width: 37%;
-  }
-}
+  } */
