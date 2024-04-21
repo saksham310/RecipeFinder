@@ -18,14 +18,14 @@ export class RecipeService {
       
       this.foodRecipe=[
      
-          {
-            id: 1,
-            description: 'A delicious lemon chicken',
-            ingredients: 'Lemon, Chicken',
-            name: 'Lemon Chicken',
-            instructions: 'Cook nicely. Cook cool',
-            category: 'Meat',
-          },
+        {
+          id: 1,
+          description: "A zesty lemon-infused chicken delight",
+          ingredients: "Chicken breasts, Lemons, Olive oil, Garlic, Salt, Pepper",
+          name: "Lemon Chicken",
+          instructions: "Preheat your oven to 375°F (190°C). Place chicken breasts in a baking dish. In a small bowl, combine the juice of two lemons, minced garlic, olive oil, salt, and pepper. Pour the lemon mixture over the chicken, ensuring it's evenly coated. Cover the baking dish with foil and bake for 25-30 minutes, or until the chicken is cooked through. Remove the foil and broil for an additional 2-3 minutes to get a golden brown color on top. Serve hot, garnished with fresh lemon slices and chopped parsley if desired.",
+          category: "Meat"
+        },
           {
             id: 2,
             description: 'A savory garlic shrimp dish',
