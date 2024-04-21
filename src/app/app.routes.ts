@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 import { HeroPageComponent } from './hero-page/hero-page.component';
 import { RecipeFormComponent } from './recipe-form/recipe-form.component';

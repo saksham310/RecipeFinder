@@ -1,27 +1,39 @@
-# RecipeFinder
+## Recipe Finder Architecture Overview
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+### Components
 
-## Development server
+1. **Card Component**: Displays a product card for each recipe.
+2. **Nav Component**: Contains the logo that redirects users to the home page.
+3. **Landing Page Component**: Displays the first section when users view the website.
+4. **Detail Page Component**: Provides a detailed view of each recipe.
+5. **Home Page Component**: Comprises a search area and hosts the card component.
+6. **Main Component**: Hosts the nav, landing, and home components.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Functionality
 
-## Code scaffolding
+- **CRUD Operations**: Users can perform CRUD (Create, Read, Update, Delete) operations to maintain their recipes.
+- **Viewing Recipes**: Users can view recipes on the landing page and navigate to detailed views.
+- **Search Functionality**: The home page includes a search area where users can search for recipes based on name and category.
+- **SortFunctionality**: User can arrange the recipe list in ascending or descending order.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Overview
 
-## Build
+- **Routing**: Angular's routing is used to navigate between the landing page and the detail page of a recipe.
+- **Responsive Design**: The application is designed to be responsive, ensuring a seamless experience across different devices and screen sizes.
+- **Service Layer**: Services are used to encapsulate business logic and interact with local storage.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Running the Angular Application
 
-## Running unit tests
+### Git clone
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Clone the Repository**: First, clone the RecipeFinder repository from GitHub. Open your terminal and run the following command:
 
-## Running end-to-end tests
+```bash
+git clone https://github.com/saksham310/RecipeFinder.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Running the app
+1. **Install Angular CLI**
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. **Navigate to Your Project Directory** (where your RecipeFinder is)
+3. **Install Dependencies**: Use npm install 4.**Start the Development Server**: Use ng serve to start the server and visit `http://localhost:4200/` to access the application.
+```
