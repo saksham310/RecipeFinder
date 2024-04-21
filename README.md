@@ -30,10 +30,25 @@
 
 ```bash
 git clone https://github.com/saksham310/RecipeFinder.git
+```
 
 ### Running the app
+
 1. **Install Angular CLI**
 
+```bash
+npm install -g @angular/cli@17.3.4
+```
+
 2. **Navigate to Your Project Directory** (where your RecipeFinder is)
-3. **Install Dependencies**: Use npm install 4.**Start the Development Server**: Use ng serve to start the server and visit `http://localhost:4200/` to access the application.
+3. **Install Dependencies**: Use npm install
+
+```bash
+npm install
+```
+
+4.**Start the Development Server**: Use ng serve to start the server and visit `http://localhost:4200/` to access the application.
+
+```bash
+ng serve
 ```
